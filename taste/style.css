@@ -1,0 +1,109 @@
+/* The quiet instrument · White and moss · static, text only. */
+:root{
+  color-scheme:light;
+  --bg:#fff;
+  --ink:#2a2a26;
+  --muted:#59574e;
+  --accent:#4f6238;
+  --accent-ink:#fff;
+  --selection:#c3ceb1;
+  --sans:Sohne,Arial,sans-serif;
+  --title-face:Inter,Arial,sans-serif;
+  --small:14px;
+  --body:17px;
+  --entry:18px;
+  --lead:20px;
+  --heading:20px;
+  --display:54px;
+  --column:640px;
+  --gutter:24px;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:40px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3,h4{text-wrap:balance;font-weight:500}
+h1{font-size:var(--display);line-height:1.08;letter-spacing:-.045em}
+h2,h4{font-size:var(--heading);line-height:1.3;letter-spacing:-.02em}
+h3{font-size:var(--body);line-height:1.4;letter-spacing:-.015em}
+p{text-wrap:pretty}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px;overflow-wrap:anywhere}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
+::selection{background:var(--selection);color:var(--ink)}
+.page{width:min(var(--column),calc(100% - 2 * var(--gutter)));margin-inline:auto;padding-block:104px 38px}
+.skip-link{position:absolute;left:-9999px;top:16px;background:var(--bg);padding:8px 12px}
+.skip-link:focus{left:var(--gutter)}
+.page.prose-page{padding-top:36px}
+.site-header{max-width:640px;margin-bottom:40px}
+.site-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 24px;min-height:44px}
+.site-nav a{font-size:14px;line-height:1.5;padding-block:11px;text-decoration:none}
+.site-nav a[aria-current],.site-nav a:hover{text-decoration:underline}
+.intro h1{font-family:var(--title-face);font-style:normal;font-weight:500;font-size:clamp(40px,4.5vw,60px);line-height:1.04;letter-spacing:-.04em;margin-left:-.04em;font-kerning:normal;font-synthesis:none}
+.profile-page{--name-face:Newsreader,Georgia,serif}
+.profile-page .intro h1{font-family:var(--name-face);font-style:normal;font-weight:400;font-size:clamp(42px,4.5vw,62px);line-height:1.06;letter-spacing:-.025em;margin-left:-.025em}
+.intro .lead{font-size:var(--lead);line-height:1.5;letter-spacing:-.01em;margin-top:24px}
+.intro .biography{margin-top:24px;font-size:var(--body);line-height:1.65}
+.biography p+p{margin-top:18px}
+.biography p{scroll-margin-top:40px}
+.intro .profile-narrative{margin-top:18px;font-size:var(--body);line-height:1.65}
+.profile-narrative p+p{margin-top:18px}
+.profile-narrative p{scroll-margin-top:40px}
+main>section{margin-top:60px}
+.cv-section{display:grid;grid-template-columns:128px minmax(0,1fr);column-gap:28px;align-items:start}
+.section-body{min-width:0}
+.cv-section.compact{margin-top:36px}
+.project-list{display:grid;gap:24px}
+.project h3{font-size:var(--entry);line-height:1.4;letter-spacing:-.015em;font-weight:500}
+.project p{margin-top:8px}
+.project-list>.record-link{font-size:var(--small)}
+.record+.record{margin-top:24px}
+.record-title{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.record-title h3{font-size:var(--entry);font-weight:500;letter-spacing:-.015em}
+.dates{flex-shrink:0;font-size:var(--small);color:var(--muted);font-variant-numeric:tabular-nums}
+.record>p{margin-top:5px}
+.record>p+p{margin-top:8px}
+.record .record-link{font-size:var(--small);margin-top:12px}
+.course-intro .course-link{margin-top:12px}
+.contact-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+.contact-links .email-link{color:var(--accent)}
+.contact-location{font-size:var(--small);color:var(--muted);margin-top:10px}
+footer{display:flex;justify-content:space-between;gap:24px;margin-top:48px;font-size:var(--small);color:var(--muted)}
+/* Standalone coursework uses the same paper, type and reading frame. */
+.back-link{display:inline-block;font-size:var(--small);margin-bottom:36px}
+.courses-page h1{margin-bottom:48px}
+.university-columns{display:grid;gap:64px}
+.institution h2{font-family:var(--title-face);font-size:24px;font-weight:500;line-height:1.3}
+.degree{color:var(--muted);font-size:var(--small);margin-top:8px}
+.course-group{margin-top:36px}
+.course-group h3{font-family:var(--title-face);font-size:var(--entry);font-weight:600;line-height:1.4;margin-bottom:14px}
+.course-group ul{margin:0;padding:0 0 0 16px;list-style:none}
+.course+.course{margin-top:8px}
+.record-date{font-size:var(--small);color:var(--muted);margin-top:48px}
+.page~footer{width:min(var(--column),calc(100% - 2 * var(--gutter)));margin:20px auto 36px}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%}
+@media(max-width:600px){
+  :root{--display:44px;--lead:19px}
+  .page{padding-top:64px;padding-bottom:28px}
+  .intro .lead{margin-top:22px}
+  main>section{margin-top:48px}
+  .cv-section{display:block}
+  .cv-section>h2{margin-bottom:18px}
+  .cv-section.compact{margin-top:32px}
+  .cv-section.compact>h2{margin-bottom:12px}
+  .record-title{display:block}
+  .record-title .dates{margin-top:5px}
+  .record>p{margin-top:7px}
+  footer{margin-top:40px}
+  .courses-page h1{margin-bottom:36px}
+  .university-columns{gap:48px}
+}
+@media(max-width:360px){:root{--display:38px;--gutter:20px}.intro h1{font-size:38px}}
+@media print{
+  :root{--bg:#fff;--ink:#000;--accent:#000}
+  .page{padding-top:24px}
+  .skip-link{display:none}
+  main>section{margin-top:32px}
+  .project,.record,.course-group{break-inside:avoid}
+}
+
+@media(max-width:360px){.profile-page .intro h1{font-size:36px}}

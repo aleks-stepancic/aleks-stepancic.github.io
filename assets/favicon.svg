@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Abstract cut-paper pattern</title>
+  <defs><clipPath id="frame"><rect width="64" height="64" rx="12"/></clipPath></defs>
+  <g clip-path="url(#frame)">
+    <path fill="#0757d5" d="M0 0h64v64H0z"/>
+    <g fill="#ffb18c">
+      <path d="M7 7h24v24A24 24 0 0 1 7 7Z"/>
+      <path d="M38 5h20v23A23 23 0 0 1 38 5Z"/>
+      <path d="M5 42l22-8v17L5 59Z"/>
+      <path d="M36 36h24v24H36Z"/>
+    </g>
+    <path fill="#0757d5" d="M36 36h15a15 15 0 0 1-15 15Z"/>
+  </g>
+</svg>
